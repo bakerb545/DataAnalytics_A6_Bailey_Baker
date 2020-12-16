@@ -141,9 +141,8 @@ models<- function(train, mort){
 }
 
 #####DATA UPLOAD#####
-mort<- data.frame(read_xlsx("C:/Users/phoen/Downloads/2017 Under-Five Mortality.xlsx"))
+mort<- data.frame(read_xlsx("C:/Users/phoen/Dropbox/MGMT 6962/DataAnalytics_A6_Bailey_Baker/2017 Under-Five Mortality.xlsx"))
 #View(mort)
-
 for (i in 3:ncol(mort)-1){
   mort[,i]<- as.numeric(mort[,i])
 }
@@ -184,12 +183,12 @@ change<- function(x){
 }
 
 #import of training data
-t2016<- data.frame(read_xlsx("C:/Users/phoen/Downloads/GLOBAL_DATAFLOW_2011-2016.xlsx", sheet=1))
-t2015<- data.frame(read_xlsx("C:/Users/phoen/Downloads/GLOBAL_DATAFLOW_2011-2016.xlsx", sheet=3))
-t2014<- data.frame(read_xlsx("C:/Users/phoen/Downloads/GLOBAL_DATAFLOW_2011-2016.xlsx", sheet=4))
-t2013<- data.frame(read_xlsx("C:/Users/phoen/Downloads/GLOBAL_DATAFLOW_2011-2016.xlsx", sheet=5))
-t2012<- data.frame(read_xlsx("C:/Users/phoen/Downloads/GLOBAL_DATAFLOW_2011-2016.xlsx", sheet=6))
-t2011<- data.frame(read_xlsx("C:/Users/phoen/Downloads/GLOBAL_DATAFLOW_2011-2016.xlsx", sheet=7))
+t2016<- data.frame(read_xlsx("C:/Users/phoen/Dropbox/MGMT 6962/DataAnalytics_A6_Bailey_Baker/GLOBAL_DATAFLOW_2011-2016.xlsx", sheet=1))
+t2015<- data.frame(read_xlsx("C:/Users/phoen/Dropbox/MGMT 6962/DataAnalytics_A6_Bailey_Baker/GLOBAL_DATAFLOW_2011-2016.xlsx", sheet=3))
+t2014<- data.frame(read_xlsx("C:/Users/phoen/Dropbox/MGMT 6962/DataAnalytics_A6_Bailey_Baker/GLOBAL_DATAFLOW_2011-2016.xlsx", sheet=4))
+t2013<- data.frame(read_xlsx("C:/Users/phoen/Dropbox/MGMT 6962/DataAnalytics_A6_Bailey_Baker/GLOBAL_DATAFLOW_2011-2016.xlsx", sheet=5))
+t2012<- data.frame(read_xlsx("C:/Users/phoen/Dropbox/MGMT 6962/DataAnalytics_A6_Bailey_Baker/GLOBAL_DATAFLOW_2011-2016.xlsx", sheet=6))
+t2011<- data.frame(read_xlsx("C:/Users/phoen/Dropbox/MGMT 6962/DataAnalytics_A6_Bailey_Baker/GLOBAL_DATAFLOW_2011-2016.xlsx", sheet=7))
 
 t2016<- change(t2016)
 t2016<- t2016[is.na(t2016$UNDER5_MORT) == FALSE,]
